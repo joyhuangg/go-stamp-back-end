@@ -5,6 +5,7 @@ class DealsController < ApplicationController
   end
 
   def show
+    @deal = Deal.find(params[:id])
     render json: @deal
   end
 
@@ -18,6 +19,6 @@ class DealsController < ApplicationController
   end
 
   def deal_params
-    params.permit(:category, :description, :store_id, :max_points)
+    params.permit(:category, :description, :max_points, :store_id)
   end
 end
