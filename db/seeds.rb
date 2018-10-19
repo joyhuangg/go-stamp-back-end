@@ -18,5 +18,5 @@ end
 end
 
 5.times do
-  StampCard.create(customer, deal_id: rand(1..3), current_points: rand(1..3))
+  StampCard.create(customer:customer, deal_id: rand(1..3), current_points: rand(1..3))
 end
