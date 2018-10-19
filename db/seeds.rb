@@ -14,7 +14,7 @@ end
 end
 
 3.times do
-  Deal.create(category: Faker::App.name, description: Faker::BojackHorseman.quote, store_id: rand(1..3))
+  Deal.create(category: Faker::App.name, description: Faker::BojackHorseman.quote, store_id: rand(1..3), max_points:6)
 end
 
 5.times do

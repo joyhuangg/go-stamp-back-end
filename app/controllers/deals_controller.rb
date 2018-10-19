@@ -18,6 +18,6 @@ class DealsController < ApplicationController
   end
 
   def deal_params
-    params.permit(:category, :description, :store_id)
+    params.permit(:category, :description, :store_id, :max_points)
   end
 end
