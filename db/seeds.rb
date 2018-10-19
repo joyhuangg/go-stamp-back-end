@@ -5,9 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-5.times do
-  Customer.create(name: Faker::FunnyName.name)
-end
+
+customer = Customer.create(name: Faker::FunnyName.name)
+
 
 3.times do
   Store.create(name: Faker::OnePiece.location)
@@ -18,5 +18,5 @@ end
 end
 
 5.times do
-  StampCard.create(customer_id: rand(1..5), deal_id: rand(1..3), current_points: rand(1..3))
+  StampCard.create(customer, deal_id: rand(1..3), current_points: rand(1..3))
 end

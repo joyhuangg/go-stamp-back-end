@@ -20,7 +20,7 @@ class StampCardsController < ApplicationController
 
   def update
     @stamp_card = StampCard.find(params[:id])
-    StampCard.update(params[:id].to_i, current_points: params[:stamp_card][:current_points])
+    StampCard.update(params[:id].to_i, deal_id:params[:stamp_card][:deal_id], current_points: params[:stamp_card][:current_points])
     if @stamp_card.save
       render json: @stamp_card, status: :accepted
     else
