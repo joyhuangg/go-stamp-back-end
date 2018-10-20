@@ -17,5 +17,6 @@ end
   Deal.create(category: Faker::App.name, description: Faker::BojackHorseman.quote, store_id: rand(1..3), max_points:6)
 end
 
+
   StampCard.create(customer: customer, deal_id: 1, current_points: rand(1..3))
   StampCard.create(customer: customer, deal_id: 2, current_points: rand(1..3))
