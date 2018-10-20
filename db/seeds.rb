@@ -13,10 +13,9 @@ customer = Customer.create(name: Faker::FunnyName.name)
   Store.create(name: Faker::OnePiece.location)
 end
 
-3.times do
+5.times do
   Deal.create(category: Faker::App.name, description: Faker::BojackHorseman.quote, store_id: rand(1..3), max_points:6)
 end
 
-5.times do
-  StampCard.create(customer, deal_id: rand(1..3), current_points: rand(1..3))
-end
+  StampCard.create(customer: customer, deal_id: 1, current_points: rand(1..3))
+  StampCard.create(customer: customer, deal_id: 2, current_points: rand(1..3))
