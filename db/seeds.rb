@@ -6,7 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-customer = Customer.create(name: Faker::FunnyName.name)
 store1 = Store.create(name: "Gong Cha")
 store2 = Store.create(name: "Pizza by the Slice")
 store3 = Store.create(name: "Coco")
@@ -16,6 +15,3 @@ Deal.create(category: "40% off", description: "", store_id: rand(1..3), max_poin
 Deal.create(category: "Free Appetizer", description: "", store_id: rand(1..3), max_points:6)
 Deal.create(category: "Free Topping", description: "", store_id: rand(1..3), max_points:6)
 Deal.create(category: "Free Large Drink", description: "", store_id: rand(1..3), max_points:6)
-
-StampCard.create(customer: customer, deal_id: 1, current_points: rand(1..3))
-StampCard.create(customer: customer, deal_id: 2, current_points: rand(1..3))

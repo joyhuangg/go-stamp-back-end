@@ -17,6 +17,10 @@ ActiveRecord::Schema.define(version: 2018_10_18_215423) do
 
   create_table "customers", force: :cascade do |t|
     t.string "name"
+    t.string "username"
+    t.string "password_digest"
+    t.string "bio"
+    t.string "avatar"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
