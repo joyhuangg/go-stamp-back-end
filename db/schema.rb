@@ -47,6 +47,8 @@ ActiveRecord::Schema.define(version: 2018_10_18_215423) do
 
   create_table "stores", force: :cascade do |t|
     t.string "name"
+    t.string "icon_url"
+    t.string "stamp_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
