@@ -19,6 +19,6 @@ class DealsController < ApplicationController
   end
 
   def deal_params
-    params.permit(:category, :description, :max_points, :store_id)
+    params.permit(:category, :background_url, :max_points, :store_id)
   end
 end
