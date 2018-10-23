@@ -15,7 +15,7 @@ class ApplicationController < ActionController::API
       token = auth_header
       # headers: { 'Authorization': '<token>' }
       begin
-        JWT.decode(token, 'my_s3cr3t', true, algorithm: 'HS256')
+        JWT.decode(token, 'my_secret', true, algorithm: 'HS256')
         # JWT.decode => [{ "beef"=>"steak" }, { "alg"=>"HS256" }]
       rescue JWT::DecodeError
         nil
@@ -26,11 +26,13 @@ class ApplicationController < ActionController::API
 
 
   def current_user
+    # byebug
     if decoded_token
       # decoded_token=> [{"user_id"=>2}, {"alg"=>"HS256"}]
       # or nil if we can't decode the token
+
       customer_id = decoded_token[0]['customer_id']
-      @customer = Customer.find_by(id: customer_id)
+      return @customer = Customer.find_by(id: customer_id)
     end
   end
 

@@ -7,7 +7,7 @@ class AuthController < ApplicationController
     if @customer && @customer.authenticate(customer_login_params[:password])
       # encode token comes from ApplicationController
       token = encode_token({ customer_id: @customer.id })
-      render json: { customer: CustomerSerializer.new(@customer), jwt: token }, status: :accepted
+      render json: { customer: @customer, token: token }, status: :accepted
     else
       render json: { message: 'Invalid username or password' }, status: :unauthorized
     end
@@ -15,7 +15,8 @@ class AuthController < ApplicationController
 
   def show
     token = request.headers["Authorization"]
-    customer = Customer.find_by(id: token)
+    # byebug
+    customer = Customer.find_by(id: decoded_token[0]["customer_id"])
 
     if customer
       render json: {username: customer.username, id: customer.id}
@@ -28,6 +29,6 @@ class AuthController < ApplicationController
 
   def customer_login_params
     # params { user: {username: 'Chandler Bing', password: 'hi' } }
-    params.permit(:username, :password)
+    params.permit(:username, :password, :auth)
   end
 end
