@@ -28,6 +28,8 @@ class StampCardsController < ApplicationController
     end
   end
 
+  private
+  
   def stamp_cards_params
     params.permit(:customer_id, :deal_id, :current_points)
   end

@@ -5,19 +5,38 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-gong_cha_pic = "https://pbs.twimg.com/profile_images/1013396217223622656/peBGxfZe_400x400.jpg"
-stamp_pic = "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjlgYODx5veAhULmuAKHRjuBhgQjRx6BAgBEAU&url=https%3A%2F%2Fwww.kisspng.com%2Fpng-seal-rubber-stamp-clip-art-vintage-travel-tag-310115%2F&psig=AOvVaw3bHyIdQT6-G_s6s7fqGQDR&ust=1540349444411440"
+
+gong_cha_pic = "https://lh3.googleusercontent.com/qcAoaxHziW6Vx5Mhj-zR2cbpV5m4OlFMzYa60JbXKL2gqBkDbZzW3C_4QhFWbZIAzfg=h300"
+stamp_pic = "https://dxjl3qy52c1o9.cloudfront.net/wp-content/2013/11/number-chop.png"
 store1 = Store.create(name: "Gong Cha", icon_url: gong_cha_pic, stamp_url:stamp_pic)
 
-pizza_pic = "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj_3tWWx5veAhUCmuAKHX-kC6oQjRx6BAgBEAU&url=https%3A%2F%2Fwww.iconfinder.com%2Ficons%2F109416%2Feating_food_pizza_pizza_slice_raw_simple_icon&psig=AOvVaw0NdswOupF2Goy-MSxVG-ty&ust=1540349491377235"
-store2 = Store.create(name: "Pizza by the Slice",icon_url: pizza_pic, stamp_url:stamp_pic)
+poke_pic = "https://pbs.twimg.com/media/Cmc5z6mVMAQaz6e.png"
+store2 = Store.create(name: "Poke Bowl",icon_url: poke_pic, stamp_url:stamp_pic)
 
+pasta_pic = "https://ubisafe.org/images/spaghetti-drawing-side-dish-2.png"
+store3 = Store.create(name: "Pasta For Life", icon_url: pasta_pic, stamp_url:stamp_pic)
 
-cocos = "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjo9cOux5veAhUwnOAKHe1SAygQjRx6BAgBEAU&url=http%3A%2F%2Fwww.cocofreshdtla.com%2F&psig=AOvVaw0i5r6w4i9HWwPExt7PCh0o&ust=1540349545193708"
-store3 = Store.create(name: "Coco", icon_url:cocos, stamp_url:stamp_pic)
+pizza_pic = "http://www.clker.com/cliparts/8/f/9/4/1194984144102684069pizza_4_stagioni_archite_01.svg.hi.png"
+store4 = Store.create(name: 'Pizza By The Slice', icon_url: pizza_pic, stamp_url: stamp_pic)
 
-Deal.create(category: "BOGO (buy 1 get 1 free)", description: "", store_id: rand(1..3), max_points:6)
-Deal.create(category: "40% off", description: "", store_id: rand(1..3), max_points:6)
-Deal.create(category: "Free Appetizer", description: "", store_id: rand(1..3), max_points:6)
-Deal.create(category: "Free Topping", description: "", store_id: rand(1..3), max_points:6)
-Deal.create(category: "Free Large Drink", description: "", store_id: rand(1..3), max_points:6)
+coffee_pic = "https://bluestonelane.com/wp-content/uploads/2014/07/BSL_crown_logo.png"
+store5 = Store.create(name: "Bluestone Lane", icon_url: coffee_pic, stamp_url: stamp_pic)
+
+bubble_tea = "http://1.bp.blogspot.com/-IWc9pdAhEQI/Ti-iJCiHIDI/AAAAAAAABxM/ieaM8ERmEWI/s1600/greenteaboba.JPG"
+Deal.create(category: "BOGO (buy 1 get 1 free)", background_url: bubble_tea, store_id: 1, max_points:6)
+Deal.create(category: "40% Off", store_id: 1, background_url: bubble_tea, max_points:6)
+
+poke_bowl = "https://cdn.dribbble.com/users/1748211/screenshots/4094780/pokebowl.jpg"
+Deal.create(category: "BOGO (buy 1 get 1 free)", background_url: poke_bowl, store_id: 2, max_points:6)
+
+pasta = "https://melbournechapter.net/images/kawaii-clipart-pasta-4.png"
+Deal.create(category: "Free Appetizer", background_url: pasta, store_id: 3, max_points:6)
+Deal.create(category: "Free Topping", background_url: pasta, store_id: 3, max_points:6)
+
+pizza = "https://banner2.kisspng.com/20180807/ezt/kisspng-pizza-pizza-pug-drawing-burrito-cute-kawaii-pug-chibi-food-pizzafreetoedit-5b69bf515e17e5.8063962115336569133854.jpg"
+Deal.create(category: "Free Topping", background_url: pizza, store_id: 4, max_points:6)
+Deal.create(category: "BOGO (buy 1 get 1 free)", background_url: pizza, store_id: 4, max_points:6)
+
+coffee = "https://banner2.kisspng.com/20180130/tje/kisspng-tea-coffee-drawing-illustration-cute-mugs-jun-5a71056550c139.9855756415173563893308.jpg"
+Deal.create(category: "Free Upgrade", background_url: coffee, store_id: 5, max_points:6)
+Deal.create(category: "Free Large Drink", background_url: coffee, store_id: 5, max_points:6)
