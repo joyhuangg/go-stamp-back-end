@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-gong_cha_pic = "https://www.google.com/imgres?imgurl=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1013396217223622656%2FpeBGxfZe_400x400.jpg&imgrefurl=https%3A%2F%2Ftwitter.com%2Fgongchatea&docid=DKLDe0c7-T9w3M&tbnid=JGf4ZEDEh5saXM%3A&vet=10ahUKEwjDsP_WxZveAhVImuAKHXFXDm8QMwg_KAAwAA..i&w=400&h=400&bih=615&biw=1346&q=gong%20cha%20image%20icon&ved=0ahUKEwjDsP_WxZveAhVImuAKHXFXDm8QMwg_KAAwAA&iact=mrc&uact=8"
+gong_cha_pic = "https://pbs.twimg.com/profile_images/1013396217223622656/peBGxfZe_400x400.jpg"
 stamp_pic = "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjlgYODx5veAhULmuAKHRjuBhgQjRx6BAgBEAU&url=https%3A%2F%2Fwww.kisspng.com%2Fpng-seal-rubber-stamp-clip-art-vintage-travel-tag-310115%2F&psig=AOvVaw3bHyIdQT6-G_s6s7fqGQDR&ust=1540349444411440"
 store1 = Store.create(name: "Gong Cha", icon_url: gong_cha_pic, stamp_url:stamp_pic)
 
