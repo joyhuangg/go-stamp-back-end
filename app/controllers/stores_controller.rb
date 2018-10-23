@@ -20,6 +20,6 @@ class StoresController < ApplicationController
   end
 
   def store_params
-    params.permit(:name, :deals, :icon_url, :stamp_url)
+    params.permit(:name, :deals, :icon_url, :stamp_url, :description)
   end
 end
