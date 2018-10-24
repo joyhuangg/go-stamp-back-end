@@ -8,19 +8,19 @@
 
 gong_cha_pic = "https://lh3.googleusercontent.com/qcAoaxHziW6Vx5Mhj-zR2cbpV5m4OlFMzYa60JbXKL2gqBkDbZzW3C_4QhFWbZIAzfg=h300"
 stamp_pic = "https://dxjl3qy52c1o9.cloudfront.net/wp-content/2013/11/number-chop.png"
-store1 = Store.create(name: "Gong Cha", icon_url: gong_cha_pic, stamp_url:stamp_pic, description: "Founded in Kaoshiung, Taiwan in 2006, Gong Cha is the fastest growing tea brand in Asia with over 600 stores in Taiwan, Singapore, Hong Kong, China, Philippines, Cambodia, Korea, USA, Indonesia, Malaysia. Gong Cha is the act of offering tea to the Emperor in ancient China.")
+store1 = Store.create(name: "Gong Cha", icon_url: gong_cha_pic, stamp_url:stamp_pic, description: "Founded in Kaoshiung, Taiwan in 2006, Gong Cha is the fastest growing tea brand in Asia with over 600 stores in Asia and North America. Gong Cha offers tea to the Emperor in ancient China.")
 
 poke_pic = "https://pbs.twimg.com/media/Cmc5z6mVMAQaz6e.png"
-store2 = Store.create(name: "Poke Bowl",icon_url: poke_pic, stamp_url:stamp_pic, description: "Poke bowls, otherwise known as the rice bowls full of super fresh fish and colorful toppings taking over your Instagram feed. At its most basic level, a poke bowl is made up of a base, typically rice, cubed raw sushi-grade salmon or tuna, and Asian toppings like soy sauce and seaweed")
+store2 = Store.create(name: "Poke Bowl",icon_url: poke_pic, stamp_url:stamp_pic, description: "Poke bowls, otherwise known as the rice bowls full of super fresh fish and colorful toppings taking over your Instagram feed.")
 
 pasta_pic = "https://ubisafe.org/images/spaghetti-drawing-side-dish-2.png"
-store3 = Store.create(name: "Pasta For Life", icon_url: pasta_pic, stamp_url:stamp_pic, description: "We're just a few laid-back, neighborhood pasta shops. Nothing fancy. We make everything from scratch using  all fresh, whole ingredients. We're best known for our Farfalle Pollo pasta. The cheesy garlic bread is pretty good too! We cook too much food, we pour drinks heavy, and we  laugh a little too loud.  You wouldn't  have us any other way...")
+store3 = Store.create(name: "Pasta For Life", icon_url: pasta_pic, stamp_url:stamp_pic, description: "We're just a few laid-back, neighborhood pasta shops. Nothing fancy. We make everything from scratch using  all fresh, whole ingredients.")
 
 pizza_pic = "http://www.clker.com/cliparts/8/f/9/4/1194984144102684069pizza_4_stagioni_archite_01.svg.hi.png"
-store4 = Store.create(name: 'Pizza By The Slice', icon_url: pizza_pic, stamp_url: stamp_pic, description: "Pizza bread is a type of sandwich that is often served open-faced which consists of bread, tomato sauce, cheese and various toppings. ... Pizza sticks may be prepared with pizza dough and pizza ingredients, in which the dough is shaped into stick forms, sauce and toppings are added, and it is then baked.")
+store4 = Store.create(name: 'Pizza By The Slice', icon_url: pizza_pic, stamp_url: stamp_pic, description: "Pizza bread is a type of sandwich that is often served open-faced which consists of bread, tomato sauce, cheese and various toppings. ... ")
 
 coffee_pic = "https://bluestonelane.com/wp-content/uploads/2014/07/BSL_crown_logo.png"
-store5 = Store.create(name: "Bluestone Lane", icon_url: coffee_pic, stamp_url: stamp_pic, description: "Our coffee shops offer a limited food menu that includes our world renowned Avo Smash, Toasts and Bowls with counter service only. For extensive indoor and alfresco dining with table service, visit our Cafés")
+store5 = Store.create(name: "Bluestone Lane", icon_url: coffee_pic, stamp_url: stamp_pic, description: "Our coffee shops offer a limited food menu that includes our world renowned Avo Smash, Toasts and Bowls with counter service only. ")
 
 bubble_tea = "http://1.bp.blogspot.com/-IWc9pdAhEQI/Ti-iJCiHIDI/AAAAAAAABxM/ieaM8ERmEWI/s1600/greenteaboba.JPG"
 Deal.create(category: "BOGO (buy 1 get 1 free)", background_url: bubble_tea, store_id: 1, max_points:6)
