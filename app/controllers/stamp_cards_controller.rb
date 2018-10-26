@@ -28,8 +28,14 @@ class StampCardsController < ApplicationController
     end
   end
 
+  def destroy
+    @stamp_card = StampCard.find(params[:id])
+    @stamp_card.destroy
+    render status: :accepted
+  end
+
   private
-  
+
   def stamp_cards_params
     params.permit(:customer_id, :deal_id, :current_points)
   end
