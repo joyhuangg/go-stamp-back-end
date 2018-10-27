@@ -26,11 +26,7 @@ class ApplicationController < ActionController::API
 
 
   def current_user
-    # byebug
     if decoded_token
-      # decoded_token=> [{"user_id"=>2}, {"alg"=>"HS256"}]
-      # or nil if we can't decode the token
-
       customer_id = decoded_token[0]['customer_id']
       return @customer = Customer.find_by(id: customer_id)
     end

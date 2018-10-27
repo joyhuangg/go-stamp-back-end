@@ -15,7 +15,6 @@ class AuthController < ApplicationController
 
   def show
     token = request.headers["Authorization"]
-    # byebug
     customer = Customer.find_by(id: decoded_token[0]["customer_id"])
 
     if customer

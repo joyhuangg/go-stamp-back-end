@@ -1,6 +1,5 @@
 class StoresController < ApplicationController
   def index
-    # byebug
     @stores = Store.all
     render json: @stores
   end
