@@ -20,6 +20,7 @@ Frontend:
 ```
 npm i && npm start
 ```
+### [Frontend](https://github.com/linh4/go-stamp-front-end)
 
 ### Future Plans:
 - There will be store site so store can add, edit and delete deals
