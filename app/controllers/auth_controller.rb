@@ -16,7 +16,6 @@ class AuthController < ApplicationController
   def show
     token = request.headers["Authorization"]
     customer = Customer.find_by(id: decoded_token[0]["customer_id"])
-
     if customer
       render json: {username: customer.username, id: customer.id}
     else
@@ -27,7 +26,6 @@ class AuthController < ApplicationController
   private
 
   def customer_login_params
-    # params { user: {username: 'Chandler Bing', password: 'hi' } }
     params.permit(:username, :password, :auth)
   end
 end
